@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SignInActivity" >
+
+    <TableLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_above="@+id/dsf" >
+
+        <LinearLayout
+            android:id="@+id/linn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dsf"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/white"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="my"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/yellow"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/yellow"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Limo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/white"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Book"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/yellow"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dsf"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="LOGO"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold|italic"
+          />
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/dsf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+  
+        android:gravity="center" >
+
+        <TableLayout
+            android:id="@+id/linEdittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/box_tv"
+            android:weightSum="2" >
+
+            <TableRow
+                android:id="@+id/linEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="7dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/smalltextbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Email"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/editText_email"
+                    style="@style/edittextWhitebg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="John@example.com"
+                    android:inputType="textEmailAddress" >
+                </EditText>
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                     android:background="@drawable/line"  />
+
+            <TableRow
+                android:id="@+id/linPsw"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="7dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    style="@style/smalltextbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password  "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/editText_psw"
+                    style="@style/edittextWhitebg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:ems="10"
+                    android:maxLength="12"
+                    android:hint="●●●●●●"
+                    android:inputType="textPassword" />
+            </TableRow>
+        </TableLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox_keep_melogin"
+            android:layout_width="wrap_content"   android:textColor="@color/viewLine"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Keep me logged in" />
+
+        <TextView
+            android:id="@+id/textView_forgotPsw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linEdittext"
+            android:layout_margin="10dp" style="@style/smalltextbold"
+            android:text="@string/forgetPasw"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/viewLine"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_signIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_forgotPsw"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            style="@style/butStyle"
+            android:text="Sign In"             android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/viewLine" />
+
+        <LinearLayout
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:padding="7dp"
+                android:text="New user? - Sign Up"
+                android:textColor="@color/yellow"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:src="@drawable/arow" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

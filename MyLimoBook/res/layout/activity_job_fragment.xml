@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/fontstyle"             android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageButton_back"
+            android:text="Jobs"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imagebutton_AddJob"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/imageButton1_refresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/imagebutton_AddJob"
+            android:background="@null"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sync" />
+
+        <ImageButton
+            android:id="@+id/imageButton_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/list" />
+    </RelativeLayout>
+
+   <com.viewpagerindicator.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bot"
+        android:layout_below="@+id/indicator" />
+ 
+    <LinearLayout
+        android:id="@+id/bot"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+          android:background="@drawable/line"  />
+
+        <RelativeLayout
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/lin_search1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:weightSum="1" >
+
+                <ImageButton
+                    android:id="@+id/imageButton_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/search" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/fontstyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Search"             android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/button_white_toyellow_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:weightSum="1" >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/today" />
+
+                <TextView
+                    style="@style/fontstyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Today"             android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/button_white_toyellow_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:weightSum="1" >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/alljob" />
+
+                <TextView
+                    style="@style/fontstyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"             android:textAllCaps="true"
+                    android:text="Today"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/button_white_toyellow_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,699 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".EditProfileActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/topbarHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top" >
+
+        <TextView
+            android:id="@+id/textView_contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="true"
+            android:layout_centerVertical="true"
+            android:text="Contact Details"   style="@style/fontstyle"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_back"
+            style="@style/butStyle"
+            android:layout_width="wrap_content"     android:textAllCaps="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+              android:layout_margin="6dp"
+            android:background="@drawable/back"
+            android:textColor="@color/white"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/button_Right"
+            style="@style/butStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_small"
+            android:text="Save" />
+
+        <LinearLayout
+            android:id="@+id/lin_for_pending_coontact"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp" >
+
+            <Button
+                android:id="@+id/button_accept"
+                style="@style/butStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/confirm"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_reject"
+                style="@style/butStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/reject"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sc1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_above="@+id/tableRow1"
+
+        android:layout_below="@+id/relativeLayout1" >
+
+        <RelativeLayout
+            android:id="@+id/lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear_proPic"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/box_tv"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:id="@+id/userImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                 
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView_profile"
+             
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+     
+    android:src="@drawable/com_facebook_profile_picture_blank_square"
+   
+        android:scaleType="fitCenter"
+ 
+         />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to change Picture"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/TextView_firstName"
+                        style="@style/smalltextbold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10" 
+                        android:textColor="@color/edittextColor"
+                        android:text="TextView_firstName"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        
+                        android:textAppearance="?android:attr/textAppearanceMedium" >
+                    </TextView>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                     
+                          android:background="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/textviewLocation1"
+                        style="@style/smalltextbold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="textviewLocation1"
+                        android:background="@null"              android:textColor="@color/edittextColor"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+              
+                        android:textAppearance="?android:attr/textAppearanceMedium" >
+                    </TextView>
+                </TableLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/table1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/linear_proPic"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/box_tv"
+                android:gravity="center"
+                android:weightSum="3" >
+
+                <TableRow
+                    android:id="@+id/linPsw"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:weightSum="1"
+                    android:paddingTop="3dp" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Email"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/TextView_email"
+                        style="@style/smalltextbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Email"            android:textColor="@color/edittextColor"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        >
+
+                    </TextView>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+              
+                      android:background="@drawable/line" />
+    <TableRow
+                  
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp" >
+
+                    <TextView
+                    
+                        style="@style/smalltextbold"
+                        android:layout_width="105dp"
+                        android:layout_height="fill_parent"
+                      
+                        android:background="@null"
+                 
+                        android:enabled="false"
+                        android:focusable="false"
+                       
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Mobile No"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" >
+                    </TextView>
+                     <TextView
+                        android:id="@+id/TextView_Mobile"
+                        style="@style/smalltextbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="" 
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/edittextColor">
+
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+
+         
+            <TableLayout
+                android:id="@+id/table2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table1"
+                android:layout_margin="10dp"
+                android:background="@drawable/box_tv"
+                android:gravity="center"
+             
+                android:weightSum="2" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="right"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp" >
+<TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="105dp"
+                        android:layout_height="fill_parent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Location/Rego No"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" >
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/TextView_location_regNo"
+                        style="@style/smalltextbold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                       
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="TextView_location_regNo"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" >
+                    </TextView>
+
+                   
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                android:visibility="gone"
+                      android:background="@drawable/line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp" >
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="105dp"
+                        android:layout_height="fill_parent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Vehicle Type"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/TextView_VehicleType"
+                        style="@style/smalltextbold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                       
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="TextView_VehicleType"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                  android:textColor="@color/edittextColor" >
+                    </TextView>
+                </TableRow>
+                 <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+          
+                      android:background="@drawable/line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp" >
+<TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="105dp"
+                        android:layout_height="fill_parent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Date Joined"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" >
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/TextView_dateJOin"
+                        style="@style/smalltextbold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                       
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="TextView_dateJOin"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                  android:textColor="@color/edittextColor">
+                    </TextView>
+                </TableRow> 
+            </TableLayout>
+
+           <!--    <TableLayout
+                android:id="@+id/table3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/table2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/box_tv"
+                android:gravity="center"
+                android:weightSum="2" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/MobileNo"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/TextView_mobileNo"
+                        style="@style/smalltextbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:ems="10"
+                        android:inputType=""
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall" >
+                    </TextView>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                      android:background="@drawable/line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/Location"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                  
+
+                    <ImageButton
+                        android:id="@+id/ImageButton01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/arowblack"
+                        android:text="@string/greter"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/table4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table3"
+                android:layout_margin="10dp"
+                android:background="@drawable/box_tv"
+                android:gravity="center"
+                android:weightSum="2" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/RegNO"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/TextView_regNo"
+                        style="@style/smalltextbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:ems="10"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall" >
+                    </TextView>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                      android:background="@drawable/line" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/VehicleType"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/textview_vehicle_type"
+                        style="@style/smalltextbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/arowblack"
+                        android:text="@string/greter"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/table4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Accept terms and conditions policy"
+                android:textColor="@color/textViewBg"
+                android:visibility="invisible" />
+            -->
+        </RelativeLayout>
+    </ScrollView>
+
+     <View
+          android:layout_above="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/viewLine" />
+    
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+      
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_weight="1"
+            style="@style/butStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="3dp"
+            android:visibility="gone"     
+            android:background="@drawable/button_yellow_mid"
+             />
+
+        <Button
+            android:id="@+id/button2"     android:layout_weight="1"
+            style="@style/butStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"     android:visibility="gone"
+            android:layout_margin="3dp"
+          android:background="@drawable/button_yellow_mid"
+         />
+
+        <TextView
+            android:id="@+id/textView1_bottomtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:layout_weight="1"
+        android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </TableRow>
+
+</RelativeLayout>

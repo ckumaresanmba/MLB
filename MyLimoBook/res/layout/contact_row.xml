@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/contacts_row_bg"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+       
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/com_facebook_profile_picture_blank_square"
+
+        android:scaleType="fitCenter"
+         android:padding="5dp"
+         />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/lin_for_search_contact"
+           android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/lin_for_search_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/button_add"
+        android:layout_toRightOf="@+id/imageView1"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="5dp"
+            android:scrollHorizontally="true" style="@style/fontstyle"
+            android:singleLine="true"
+            android:text="USD "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <!-- <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/viewLine" /> -->
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" style="@style/fontstyle"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="5dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="US Dollar "
+           android:textSize="@dimen/textrowsmallestsize"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/Imagebutton_add"
+        style="@style/butStyle"
+        android:scaleType="centerInside"
+     
+        android:layout_width="40dp"
+        android:layout_height="40dp" 
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/add_for_search_contact"
+        android:text="Add"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+</RelativeLayout>

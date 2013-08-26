@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- # -->
+
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="270"
+                android:endColor="@color/black"
+                android:startColor="@color/black"
+                android:type="linear" />
+
+            <corners android:radius="7dp" />
+
+            <padding android:bottom="2dp" android:left="1dp" android:top="2dp" android:right="1dp" />
+        </shape>
+    </item>
+ <!--    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="270"
+                android:endColor="#8a8782"
+                android:startColor="#fff"
+                android:type="linear" />
+
+            <corners android:radius="7dp" />
+
+            <padding android:right="5dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="270"
+                android:endColor="#8a8782"
+                android:startColor="#fff"
+                android:type="linear" />
+
+            <corners android:radius="7dp" />
+
+            <padding android:left="5dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="90"
+                android:endColor="#8a8782"
+                android:startColor="#fff"
+                android:type="linear" />
+
+            <corners android:radius="7dp" />
+`
+            <padding android:top="5dp" />
+        </shape>
+    </item> -->
+    <item>
+        <shape
+            android:dither="true"
+            android:shape="rectangle" >
+            <corners android:radius="7dp" />
+
+            <solid android:color="@color/textViewBg" />
+            <!--
+                 <gradient
+                android:angle="270"
+                android:endColor="@color/textViewBg"
+              
+                android:centerColor="@color/textViewBg"
+                android:startColor="@color/textViewBg"
+                android:type="linear" />
+            -->
+        </shape>
+    </item>
+
+</layer-list>

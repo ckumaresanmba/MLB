@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"   style="@style/fontstyle"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_contact_fragment"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imagebutton_addContact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/imageButton_refresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/imagebutton_addContact"
+            android:background="@null"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sync" />
+
+        <ImageButton
+            android:id="@+id/imageButton_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/list" />
+    </RelativeLayout>
+
+ <com.viewpagerindicator.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/indicator"
+         /> 
+ 
+</RelativeLayout>

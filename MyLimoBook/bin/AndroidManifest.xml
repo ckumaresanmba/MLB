@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mylimobook"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.mylimobook.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+
+                <!--
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />      -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mylimobook.SignInActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mylimobook.DashBoardActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_dash_board"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.SettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.EditProfileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_edit_profile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.TermsAndService"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_terms_and_service"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.PrivacyPolicy"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_privacy_policy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.Registration"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_registration"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.ChangePassword"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.ForgottenPassword"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_forgor_password"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.jobs.AddJob"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_add_job"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+     
+        <activity
+            android:name="com.mylimobook.contacts.ContactDetails"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_contact_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.PaymentDetails"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_payment_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.jobs.JobFragmentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.JobDetails"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_job_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.SuburbActivity"
+            android:label="@string/title_activity_suburb"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.AirportActivity"
+            android:label="@string/title_activity_airport"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.contacts.ContactFragmentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_contact_fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.SearchContact"
+            android:label="@string/title_activity_search_contact"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.mylimobook.EditJob"
+            android:label="@string/title_activity_edit_job"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan" >
+        </activity>
+    </application>
+
+</manifest>

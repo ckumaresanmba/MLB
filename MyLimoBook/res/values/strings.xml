@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">myLimoBook</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="forgetPasw"><U>Forgotten password?</U></string>
+    <string name="title_activity_dash_board">DashBoardActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="greter">&gt;</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+    <string name="title_activity_terms_and_service">Terms of Service</string>
+    <string name="title_activity_privacy_policy">Privacy Policy</string>
+    <string name="title_activity_registration">Sign Up</string>
+    <string name="title_activity_change_password">CHANGE PASSWORD</string>
+    <string name="title_activity_forgor_password">Forgotten password</string>
+    <string name="title_activity_add_job">ADD JOB</string>
+    <string name="dateNtime">Date &amp; Time</string>
+    <string name="forgotpswText">Please enter your email and we will send you the password to the email.</string>
+<string name="feedbacktext">We\'d love to hear from you. Wether you have got ideas on how we can improve or questions for our team. Please let us know.</string>
+    <string-array name="yesno">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="title_activity_reportan_issue">Report an Issue</string>
+    <string name="title_activity_contact_details">Contact Details</string>
+    <string name="title_activity_payment_details">Payment Details</string>
+    <string name="title_activity_job_fragment">JobFragmentActivity</string>
+
+    <string-array name="LocationName">
+        <item>Sydney</item>
+        <item>India</item>
+        <item>Usa</item>
+        <item>Canada</item>
+    </string-array>
+    <string-array name="pickupJOb">
+        <item>Please Select</item>
+        <item>Airport</item>
+        <item>Suburb</item>
+    </string-array>
+
+    <string name="title_activity_job_details">JobDetails</string>
+    <!-- strings for sign up -->
+    <string name="fullname">Full Name  </string>
+    <string name="LastName">Last Name  </string>
+    <string name="Email">Email  </string>
+    <string name="Email1">Email  <sup>*</sup></string>
+    <string name="password1">Password <sup>*</sup></string>
+    <string name="Firstname">First Name  </string>
+    <string name="Password">Password  </string>
+    <string name="Repeat">Repeat  </string>
+    <string name="MobileNo">Mobile No  </string>
+    <string name="Location">Location  </string>
+    <string name="RegNO">Rego No  </string>
+    <string name="VehicleType">Vehicle Type  </string>
+    <string name="Cancel">Cancel</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="Acceptterms"><u>Accept terms and conditions</u></string>
+    <string name="Join">Join</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="Required">Required</string>
+    <string name="Required8To12char">Required. 8-12 characters</string>
+    
+    <string name="errorMessage">Connectivity problem.\nPlease try again later.</string>
+    <string name="title_activity_about">ABOUT US</string>
+    <string name="title_activity_suburb">Suburbs</string>
+    <string name="title_activity_airport">AIRPORT</string>
+    <string name="title_activity_contact_fragment">Contacts</string>
+    <string name="title_activity_search_contact">Search Contact</string>
+    <string name="uparrowText"> ↑ </string>
+    <string name="nojobs">No jobs</string>
+    <string name="title_activity_edit_job">Edit Job</string>
+<string name="CheckYourInternetConnection">Check Your Internet Connection.</string>
+<string name="BACK">BACK</string>
+</resources>

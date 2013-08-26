@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AddJob" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/topbarHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top" >
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" 
+            android:layout_margin="6dp"
+            android:paddingLeft="8dp"   style="@style/fontstyle"
+            android:background="@drawable/contact_back"
+            android:paddingRight="5dp"
+            android:text="@string/CANCEL"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"   style="@style/fontstyle"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_airport"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"   style="@style/fontstyle"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:background="@drawable/selector_button"
+            android:text="Save"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_save_suburbs"
+            style="@style/butStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/butHeight" 
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"     android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:background="@drawable/button_small"
+          
+            android:text="OK" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:id="@+id/Lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="22dp" >
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/box_tv"
+                android:weightSum="2" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+             
+                    android:weightSum="1" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                              android:padding="10dp"
+                        android:text="Airport "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <Spinner
+                        android:id="@+id/Spinner_airport"
+                      android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                       
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/edittextColor"
+                        android:textStyle="bold" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/arowblack" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                      android:background="@drawable/line" />
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"  
+                    android:weightSum="1" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                  android:padding="10dp"
+                        android:text="Flight No  "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/editText_FlightNo"
+                        style="@style/edittextWhitebg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                       
+                        android:hint="Flight No "
+                        android:inputType="textCapCharacters"
+                        android:maxLength="5"
+                        
+
+android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+
+                       
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/addjobedittextColor"
+                        android:textStyle="bold" />
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                      android:background="@drawable/line" />
+              
+            </TableLayout>
+              <TableRow
+                   
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"  android:visibility="invisible"
+                    android:weightSum="1" >
+
+                    <TextView
+                        style="@style/smalltextbold"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                  android:padding="10dp"
+                        android:text="Terminal "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/textView_terminal"
+                        style="@style/edittextWhitebg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                       
+                        
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/addjobedittextColor"
+                        android:textStyle="bold" />
+                </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

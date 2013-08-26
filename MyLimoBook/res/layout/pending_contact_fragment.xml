@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+      android:layout_marginLeft="10dp"
+      
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/titlleBarColor"
+     
+        android:gravity="center" style="@style/fontstyle"
+        android:textStyle="bold"
+        android:text="Pending Request List"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white" />
+    
+
+    <ListView
+        android:id="@+id/listView_pendingcontact"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+     
+         
+       
+        android:soundEffectsEnabled="true"
+        
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/listview_background"
+        android:divider="@drawable/line"
+        android:dividerHeight="1dp"
+       
+        tools:listitem="@layout/contact_pendingreq_row" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+  android:id="@+id/myjob_table_row"
+  android:background="#fff"
+    android:layout_height="wrap_content"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp"
+   android:orientation="horizontal"
+  
+ >
+
+  <!--   <View android:id="@+id/top" android:layout_width="1dp" android:layout_height="1dp" android:layout_alignParentTop="true"/>
+    <View android:id="@+id/bottom" android:layout_width="1dp" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+   -->  
+   <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+       
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           
+            android:layout_weight="1"
+            android:gravity="right"
+            
+            android:text="00:00 AM" style="@style/fontstyle"
+           android:textSize="19sp"
+           android:textColor="@color/black"
+       
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_money"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+        android:singleLine="false"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="9999.99 $" style="@style/fontstyle"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/titlleBarColor1"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_alignTop="@+id/top"
+        android:layout_alignBottom="@+id/bottom"
+        android:layout_width="1dp"
+        android:visibility="invisible"
+        android:layout_height="fill_parent"
+      
+     
+      
+        android:layout_toRightOf="@+id/left"
+        android:background="@color/viewLine" />
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@+id/right"
+        android:layout_toRightOf="@+id/line"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:weightSum="3"
+        android:paddingLeft="2dp" >
+
+        <ImageView
+            android:id="@+id/imageview_status"
+            android:layout_width="wrap_content"
+        android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:src="@drawable/t_up" />
+
+        <TextView
+            android:id="@+id/textView_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="dsf"
+            android:gravity="center_vertical"
+            android:singleLine="true" style="@style/fontstyle"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/textView_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"   android:gravity="center_vertical"
+            android:layout_weight="1"     android:text="dsf"
+            android:singleLine="true" style="@style/fontstyle"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/textView_extra"
+            style="@style/fontstyle"
+            android:layout_width="wrap_content"   android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:autoLink="phone"
+         
+            android:layout_weight="1"
+            android:linksClickable="true"
+            android:singleLine="true"
+            android:text="dsf"
+            android:textColor="@color/viewLine"
+            android:textSize="@dimen/textrowsmallestsize"
+            android:textStyle="bold" />
+
+          <!--    android:drawableRight="@android:drawable/stat_sys_phone_call"
+         -->
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView_Button"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            
+            android:layout_weight="1"
+            android:background="@drawable/button_small"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="offloaded"
+                        android:textAllCaps="true"
+            
+           
+            android:textColor="#000"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_amount_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_shape"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="$12.5"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</TableRow>

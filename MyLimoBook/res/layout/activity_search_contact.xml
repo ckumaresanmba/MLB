@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/topbarHeight"
+     
+        android:background="@drawable/top" >
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:paddingLeft="15dp"  style="@style/fontstyle"             android:textAllCaps="true"
+            android:paddingRight="10dp"
+            android:background="@drawable/contact_back"
+            android:text="@string/title_activity_contact_fragment"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"             android:textAllCaps="true"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" style="@style/fontstyle"
+            android:text="Add Contact"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        
+        
+         android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:background="@color/titlleBarColor"
+        android:layout_marginTop="7dp"
+         >
+        
+    <com.mylimobook.ClearableEditText
+        android:id="@+id/textView1_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/imageButton_search"
+        
+        >
+   </com.mylimobook.ClearableEditText>
+        <ImageButton
+            android:id="@+id/imageButton_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+           android:scaleType="centerInside"
+           
+      
+          
+            android:src="@drawable/search" />
+
+ 
+    
+    
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listView_search_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/listview_background"
+        android:divider="@drawable/line"
+        android:dividerHeight="1dp"
+
+       android:layout_marginBottom="10dp"
+        android:soundEffectsEnabled="true"
+        tools:listitem="@layout/contact_row" >
+    </ListView>
+
+</LinearLayout>

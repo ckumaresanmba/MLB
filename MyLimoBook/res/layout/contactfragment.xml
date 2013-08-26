@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/aasfd"
+        android:layout_width="match_parent"  android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/titlleBarColor"
+        android:layout_height="40dp" >
+
+        <EditText
+            android:id="@+id/textView1_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+           style="@style/fontstyle"
+       android:background="@null"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+         
+           
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+     
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/clearable_button_clear"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignBottom="@+id/textView1_search"
+            android:layout_alignRight="@+id/textView1_search"
+            android:layout_alignTop="@+id/textView1_search"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView_contactList"
+        android:layout_below="@+id/aasfd"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/listview_background"
+            android:divider="@drawable/line" 
+        android:dividerHeight="1dp"
+   
+      
+        android:soundEffectsEnabled="true"
+        tools:listitem="@layout/contact_row" >
+    </ListView>
+
+   
+  <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerInParent="true"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+</RelativeLayout>

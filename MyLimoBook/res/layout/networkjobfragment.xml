@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/listView1"
+        android:layout_alignRight="@+id/listView1"
+        android:layout_marginTop="7dp"
+   
+        android:background="@color/titlleBarColor"
+        android:padding="10dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+          android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/linTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:background="#02141C" />
+
+    <ListView
+        android:id="@+id/listView1"
+      android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/listview_background"
+        android:divider="@drawable/line"
+        android:dividerHeight="1dp"
+      
+      
+        android:soundEffectsEnabled="true"
+        tools:listitem="@layout/job_row" >
+
+    </ListView>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_alignTop="@+id/listView1"
+        android:layout_width="match_parent"
+        android:background="#dd000000"
+        
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/nojobs" style="@style/fontstyle"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+    </FrameLayout>
+
+</RelativeLayout>
